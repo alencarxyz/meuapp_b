@@ -30,12 +30,32 @@ class PaginaInicial extends StatelessWidget {
                 },
                 icon: Icon(Icons.search),
               ),
-              IconButton(
-                onPressed: () {
-                  print("O botão mais foi clicado.");
-                },
-                icon: Icon(Icons.more_vert),
-              ),
+
+                PopupMenuButton<int>(
+                  onSelected: (item) {
+                  if (item == 3) {
+                      Navigator.pushNamed(context, '/conversa');
+                  }
+                  
+                  },
+                  itemBuilder: (context) => [
+                    PopupMenuItem(
+                      value: 1,
+                      child: Text('Novo grupo'),
+                    ),
+
+                    PopupMenuItem(
+                      value: 2,
+                      child: Text('Nova transmissão'),
+                    ),
+
+                    PopupMenuItem(
+                      value: 3,
+                      child: Text('Configurações'),
+                    ),
+
+                  ],
+                ),
             ],
             bottom: TabBar(
               tabs: [

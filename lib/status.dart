@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 
 class Status extends StatelessWidget {
@@ -18,26 +20,38 @@ class Status extends StatelessWidget {
           ),
         ),
       ),
+
       ListTile(
         title: Text("Atualizações recentes"),
       ),
+      
       ListTile(
         leading: CircleAvatar(
           backgroundColor: Colors.green,
         ),
         title: Row(
           children: [
-            Text("WhatsApp ", 
-            style: TextStyle(
-              fontWeight: FontWeight.bold,
-              color: Color.fromARGB(255, 52, 87, 53),
+            Text(
+              "WhatsApp ",
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                color: Color.fromARGB(255, 52, 87, 53),
+              ),
             ),
+            SizedBox(
+              width: 0,
             ),
-            Icon(Icons.verified, size: 18, color: Colors.green),
+            Icon
+            (Icons.verified,
+            size: 18,
+            color: Colors.green
+            ),
           ],
         ),
         onTap: () {},
       ),
+
+      
       ListTile(
         onTap: () {
           print("O status foi clicado");
@@ -60,6 +74,7 @@ class Status extends StatelessWidget {
               "https://dailypost.ng/wp-content/uploads/2022/12/Messi-1.jpg"),
         ),
       ),
-    ]);
+    ],
+    );
   }
 }

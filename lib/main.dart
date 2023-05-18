@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:meuapp/pagina_inicial.dart';
+import 'conversa.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,7 +15,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: PaginaInicial(),
+      routes: {
+        '/':(context) => PaginaInicial(),
+        '/conversa':(context) => Conversa(),
+      },
     );
   }
 }

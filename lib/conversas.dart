@@ -11,19 +11,54 @@ class Conversas extends StatelessWidget {
       alignment: Alignment.center,
       child: ListView(
         children: [
+
           ListTile(
             subtitle: Text("Bom dia meu filho"),
             title: Text("Mamãe"),
             leading: CircleAvatar(
               child: Text("M"),
             ),
-            trailing: Text("11:34"),
-          ),
+            trailing: Column(
+              children: [
+            Text("09:09",
+            style: TextStyle(
+              color: Colors.green,  
+              ),
+            ),
+              SizedBox(height: 6),
+              CircleAvatar(backgroundColor: Colors.green,
+              radius: 12,
+              child: Text(
+                "1",
+                style: TextStyle(
+                color: Colors.white, 
+                fontSize: 12, 
+                fontWeight: FontWeight.bold,
+                ),
+                ),
+              )
+            ],
+            ),
+            onTap: () {
+             Navigator.pushNamed(context, '/conversa');
+            },
+        ),
+
+
           ListTile(
             onTap: () {
               print("A conversa foi clicada");
             },
-            subtitle: Text("Bom dia!"),
+            subtitle: Row(children: [
+              Icon(
+                Icons.done_all,
+              size: 16 ,
+              color: Colors.blue,
+              ),
+              SizedBox(width: 4),
+              Text("Bom dia!")
+            ],
+            ),
             title: Text("Bruninha 😍"),
             leading: CircleAvatar(
               backgroundImage: NetworkImage(
@@ -31,15 +66,37 @@ class Conversas extends StatelessWidget {
             ),
             trailing: Text("09:01"),
           ),
-          ListTile(
-            subtitle: Text("Oia o homi"),
+
+            ListTile(
+            subtitle: Text("fala mofi"),
             title: Text("Boca de zero nine"),
             leading: CircleAvatar(
-              backgroundImage: NetworkImage(
-                  "https://conteudo.imguol.com.br/c/entretenimento/38/2023/02/07/boca-de-09-1675802536403_v2_4x3.png"),
+              child: Text("BZN"),
             ),
-            trailing: Text("23:04"),
-          ),
+            trailing: Column(
+              children: [
+            Text("23:09",
+            style: TextStyle(
+              color: Colors.green,  
+              ),
+            ),
+              SizedBox(height: 6),
+              CircleAvatar(backgroundColor: Colors.green,
+              radius: 12,
+              child: Text("1", style: TextStyle(
+                color: Colors.white, 
+                fontSize: 12, 
+                fontWeight: FontWeight.bold,
+                ),
+                ),
+              )
+            ],
+            ),
+            onTap: () {
+              print("A conversa foi clicada");
+            },
+            ),
+
         ],
       ),
     );
