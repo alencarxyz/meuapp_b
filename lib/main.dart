@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:meuapp/pagina_inicial.dart';
-import 'conversa.dart';
+import 'configuracoes.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       routes: {
         '/':(context) => PaginaInicial(),
-        '/conversa':(context) => Conversa(),
+        '/config':(context) => Configuracoes (),
       },
     );
   }

@@ -34,7 +34,7 @@ class PaginaInicial extends StatelessWidget {
                 PopupMenuButton<int>(
                   onSelected: (item) {
                   if (item == 3) {
-                      Navigator.pushNamed(context, '/conversa');
+                      Navigator.pushNamed(context, '/config');
                   }
                   
                   },
