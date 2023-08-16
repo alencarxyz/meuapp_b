@@ -7,7 +7,7 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          backgroundColor: Color.fromARGB(255, 211, 54, 109),
+          backgroundColor: Color.fromARGB(255, 202, 31, 91),
           title: Text("Home")),
       body: ListView(
         children: [
@@ -42,7 +42,7 @@ class Home extends StatelessWidget {
                 color: Color.fromARGB(255, 148, 29, 157),
               ),
               title: Text("Cadastro"),
-              subtitle: Text("Cadastro do usuario"),
+              subtitle: Text("Cadastro do usuário"),
               trailing: Icon(Icons.chevron_right),
               onTap: () {
                 Navigator.pushNamed(context, '/cadastro');

@@ -15,7 +15,7 @@ class _CurtirState extends State<Curtir> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 211, 54, 109),
+        backgroundColor: Color.fromARGB(255, 202, 31, 91),
         title: Text("Curtir"),
       ),
       body: Center(
