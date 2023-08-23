@@ -47,6 +47,21 @@ class Home extends StatelessWidget {
               onTap: () {
                 Navigator.pushNamed(context, '/cadastro');
               }),
+
+           ListTile(
+              leading: Icon(
+                Icons.login,
+                size: 36,
+                color: Color.fromARGB(255, 148, 29, 157),
+              ),
+              title: Text("Login"),
+              subtitle: Text("Login do usuário"),
+              trailing: Icon(Icons.chevron_right),
+              onTap: () {
+               Navigator.pushNamed(context, '/login');
+              }),
+
+
         ],
       ),
     );
